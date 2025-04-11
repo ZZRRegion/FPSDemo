@@ -24,6 +24,9 @@
     <ClInclude Include="周围对象.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="绘制.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -33,6 +36,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="周围对象.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="绘制.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
