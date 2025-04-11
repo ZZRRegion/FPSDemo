@@ -10,4 +10,7 @@
 // 添加要在此处预编译的标头
 #include "framework.h"
 #include<iostream>
+#include "绘制.h"
+#include "周围对象.h"
+
 #endif //PCH_H

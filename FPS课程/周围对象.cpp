@@ -1,5 +1,4 @@
 #include "pch.h"
-#include "周围对象.h"
 DWORD Cs_周围基地址 = (DWORD)GetModuleHandleA("hl.exe") + 0x1B5A5C4;
 DWORD Cs_周围基地址2 = (DWORD)GetModuleHandleA("hl.exe") + 0x62565C;
 
@@ -59,7 +58,7 @@ void 周围对象::计算朝向_Cs(坐标结构_3 目标, 朝向结构_2& 角度, 朝向结构_2& 角度差
 	}
 	if (目标.x < FOV_x && 目标.y < FOV_y) //第三象限
 	{
-		角度.水平朝向 = 180 + atan2(目标.y - FOV_y, FOV_x - 目标.x) * 180 / 3.14159;
+		角度.水平朝向 = 180 + atan2(FOV_y - 目标.y, FOV_x - 目标.x) * 180 / 3.14159;
 	}
 	if (目标.x > FOV_x && 目标.y <= FOV_y) //第四象限
 	{
@@ -72,7 +71,7 @@ void 周围对象::计算朝向_Cs(坐标结构_3 目标, 朝向结构_2& 角度, 朝向结构_2& 角度差
 	}
 	if (目标.z <= FOV_z) //下方
 	{
-		角度.高低朝向 = atan2(目标.z - FOV_z, 平面距离) * 180 / 3.14159;
+		角度.高低朝向 = atan2(FOV_z - 目标.z, 平面距离) * 180 / 3.14159;
 	}
 
 	角度差.水平朝向 = 水平朝向 - 角度.水平朝向;

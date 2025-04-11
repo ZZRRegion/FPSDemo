@@ -1,5 +1,4 @@
 #include "pch.h"
-#include "绘制.h"
 
 绘制::绘制(HWND 窗口句柄, DWORD 矩阵地址)
 {
