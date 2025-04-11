@@ -38,6 +38,14 @@ static int mainThread()
                     float a = 屏幕坐标_j.y - 屏幕坐标_H.y;
                     FPS_绘制.画框(HDC句柄, 画刷句柄, 屏幕坐标_j.x + a / 4, 屏幕坐标_j.y, -a / 2, -a, 1);
                     DeleteObject(画刷句柄);
+
+                    char healthChar[255] = {};
+                    sprintf_s(healthChar, sizeof(healthChar), "%d", 周围.对象列表[i].Hp);
+                    FPS_绘制.绘制字符串(HDC句柄, (int)屏幕坐标_j.x, (int)屏幕坐标_j.y, 文本颜色_常用, healthChar);
+                    if (GetKeyState(VK_F2) & 1)
+                    {
+                        FPS_绘制.画线(HDC句柄, (int)屏幕坐标_j.x, (int)屏幕坐标_j.y);
+                    }
                 }
             }
         }

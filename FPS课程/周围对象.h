@@ -1,10 +1,7 @@
 #pragma once
 #include<iostream>
 #include<math.h>
-struct 坐标结构_3
-{
-	float x, y, z;
-};
+
 struct 朝向结构_2
 {
 	float 水平朝向;

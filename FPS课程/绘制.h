@@ -3,6 +3,14 @@ struct 坐标结构_2
 {
 	float x, y;
 };
+struct 坐标结构_3
+{
+	float x, y, z;
+};
+struct 坐标结构_4
+{
+	float x, y, z, w;
+};
 class 绘制
 {
 public:
@@ -28,7 +36,7 @@ public:
 	void 画线(HDC HDC句柄, int x, int y);
 	void 画框(HDC HDC句柄, HBRUSH 画刷句柄, int x, int y, int w, int h, int 厚度);
 	void 绘制字符串(HDC HDC句柄, int x, int y, COLORREF color, const char* text);
-	bool 世界坐标转屏幕坐标();
+	bool 世界坐标转屏幕坐标(坐标结构_3 游戏坐标, 坐标结构_2& 屏幕坐标);
 	bool 世界坐标转屏幕坐标_非矩阵(坐标结构_2& 屏幕坐标, float 水平角度差,float 高低角度差);
 };
 
